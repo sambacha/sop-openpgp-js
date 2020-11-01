@@ -1,6 +1,6 @@
 {
   "name": "sop-openpgp-js",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "Implementation of the [Stateless OpenPGP Command Line Interface] for [openpgp-js].",
   "main": "lib/decrypt.js",
   "bin": {
