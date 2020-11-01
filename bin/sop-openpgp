@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 const yargs = require('yargs');
 
-const encrypt = require('./encrypt');
-const decrypt = require('./decrypt');
-const sign = require('./sign');
-const verify = require('./verify');
-const generate = require('./generate');
-const extract = require('./extract');
+const encrypt = require('./lib/encrypt');
+const decrypt = require('./lib/decrypt');
+const sign = require('./lib/sign');
+const verify = require('./lib/verify');
+const generate = require('./lib/generate');
+const extract = require('./lib/extract');
 const openpgp = require('openpgp');
 
 yargs

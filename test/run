@@ -1,21 +1,21 @@
 #!/usr/bin/env bash
 echo 'Test encrypting and decrypting with armored key... success.' |
-./sop-openpgp encrypt test/testkey.asc |
-./sop-openpgp decrypt test/testkey.sec.asc
+./bin/sop-openpgp encrypt test/testkey.asc |
+./bin/sop-openpgp decrypt test/testkey.sec.asc || exit
 
 echo 'Test encrypting and decrypting with binary key... success.' |
-./sop-openpgp encrypt test/testkey.pgp |
-./sop-openpgp decrypt test/testkey.sec.pgp
+./bin/sop-openpgp encrypt test/testkey.pgp |
+./bin/sop-openpgp decrypt test/testkey.sec.pgp || exit
 
 echo 'Test encrypting and decrypting with password' |
-./sop-openpgp encrypt --with-password=123 |
-./sop-openpgp decrypt --with-password=123
+./bin/sop-openpgp encrypt --with-password=123 |
+./bin/sop-openpgp decrypt --with-password=123 || exit
 
 echo 'Test signing' |
-./sop-openpgp sign test/alice.sec
+./bin/sop-openpgp sign test/alice.sec || exit
 
 echo 'test verifyng message signature'
-./sop-openpgp verify test/detached-sig.txt test/alice.asc < test/message.txt
+./bin/sop-openpgp verify test/detached-sig.txt test/alice.asc < test/message.txt || exit
 
 echo 'test generating key'
-./sop-openpgp generate-key 'alice <alice@alice.ch>'
+./bin/sop-openpgp generate-key 'alice <alice@alice.ch>' || exit
