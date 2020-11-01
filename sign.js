@@ -2,7 +2,6 @@ const openpgp = require('openpgp');
 const fs = require('fs');
 
 const sign = async (certfile) => {
-
   const buf = fs.readFileSync(certfile);
   let readKey;
   readKey = await openpgp.key.read(buf);
@@ -16,10 +15,10 @@ const sign = async (certfile) => {
     message: openpgp.message.fromText(data),
     privateKeys: [cert],
     armor: true,
-    detached: true
+    detached: true,
   };
 
-  openpgp.sign(options).then( async (signed) => {
+  openpgp.sign(options).then(async (signed) => {
     process.stdout.write(signed.signature);
   });
 };

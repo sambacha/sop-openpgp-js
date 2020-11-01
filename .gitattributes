@@ -1,0 +1,5 @@
+*.gpg filter=gpg diff=gpg
+*.asc filter=gpg diff=gpg
+.gitattributes text
+KEY      text
+LICENSE* text

@@ -1,16 +1,31 @@
 {
-  "name": "sop-openpgp.js",
+  "name": "sop-openpgp-js",
   "version": "1.0.0",
-  "description": "",
-  "main": "sop-openpgp.js",
+  "description": "Implementation of the [Stateless OpenPGP Command Line Interface] for [openpgp-js].",
+  "main": "decrypt.js",
+  "directories": {
+    "test": "test",
+    "lib": "lib"
+  },
   "scripts": {
     "test": "test/run"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sambacha/sop-openpgp-js.git"
+  },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/sambacha/sop-openpgp-js/issues"
+  },
+  "homepage": "https://github.com/sambacha/sop-openpgp-js#readme",
   "dependencies": {
-    "openpgp": "^4.10",
-    "yargs": "^14.2.0"
+    "openpgp": "^4.10.8",
+    "yargs": "^16.1.0"
+  },
+  "devDependencies": {
+    "prettier": "2.1.2"
   }
 }
