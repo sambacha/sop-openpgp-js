@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 for file in ./*-test.js
 do
   node "$file"
