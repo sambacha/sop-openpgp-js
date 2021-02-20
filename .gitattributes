@@ -3,3 +3,5 @@
 .gitattributes text
 KEY      text
 LICENSE* text
+*.sh text eol=lf
+*.js text eol=lf
