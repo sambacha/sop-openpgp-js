@@ -31,7 +31,7 @@
   "devDependencies": {
     "coveralls": "3.1.0",
     "istanbul": "0.4.5",
-    "mocha": "8.3.2",
+    "mocha": "9.0.0",
     "prettier": "2.1.2",
     "tape": "5.2.2"
   }
